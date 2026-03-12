@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Brick
+comment1.params=x\ y\ color
+comment1.target=Brick(double,\ double,\ javafx.scene.paint.Color)
+comment2.params=
+comment2.target=void\ hit()
+comment3.params=
+comment3.target=boolean\ isDestroyed()
+comment4.params=
+comment4.target=int\ getPointValue()
+comment5.params=
+comment5.target=void\ update()
+comment6.params=gc
+comment6.target=void\ draw(javafx.scene.canvas.GraphicsContext)
+numComments=7

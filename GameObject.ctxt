@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GameObject
+comment1.params=x\ y\ width\ height\ color
+comment1.target=GameObject(double,\ double,\ double,\ double,\ javafx.scene.paint.Color)
+comment2.params=
+comment2.target=void\ update()
+comment3.params=gc
+comment3.target=void\ draw(javafx.scene.canvas.GraphicsContext)
+numComments=4
