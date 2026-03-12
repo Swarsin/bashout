@@ -14,6 +14,7 @@ public class Ball extends GameObject {
     public void update() {
         // TODO - Add dx and dy to x and y to make the ball move
         // TODO - Add basic wall bouncing logic
+        // i need a bed
     }
 
     @Override

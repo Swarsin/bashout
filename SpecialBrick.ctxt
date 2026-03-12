@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SpecialBrick
+comment1.params=x\ y
+comment1.target=SpecialBrick(double,\ double)
+comment2.params=
+comment2.target=void\ hit()
+comment3.params=gc
+comment3.target=void\ draw(javafx.scene.canvas.GraphicsContext)
+numComments=4
