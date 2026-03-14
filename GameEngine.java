@@ -30,7 +30,6 @@ public class GameEngine {
         ball.update();
         // TODO - Loop through bricks and update() them
         // TODO - Use bricks.removeIf() to clear destroyed bricks
-        // Test??
     }
 
     private void checkCollisions() {
