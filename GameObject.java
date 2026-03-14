@@ -1,3 +1,4 @@
+import javafx.geometry.Rectangle2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -31,5 +32,9 @@ public abstract class GameObject {
 
     public double getWidth() {
         return this.width;
+    }
+
+    public Rectangle2D getBounds() {
+        return new Rectangle2D(x, y, width, height);
     }
 }
