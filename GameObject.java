@@ -16,4 +16,20 @@ public abstract class GameObject {
     // Abstract methods, to force child classes to implement their own versions
     public abstract void update();
     public abstract void draw(GraphicsContext gc); // Vector graphics drawn here
+
+    public double getX() {
+        return this.x;
+    }
+
+    public double getY() {
+        return this.y;
+    }
+
+    public double getHeight() {
+        return this.height;
+    }
+
+    public double getWidth() {
+        return this.width;
+    }
 }
