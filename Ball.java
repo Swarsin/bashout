@@ -21,4 +21,6 @@ public class Ball extends GameObject {
     public void draw(GraphicsContext gc) {
         // TODO - Use gc.fillOval() to draw the ball
     }
+
+    // TODO - Make setters for getDx and reverseY (which is for when ball bounces on paddle)
 }
