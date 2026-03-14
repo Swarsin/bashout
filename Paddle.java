@@ -15,4 +15,6 @@ public class Paddle extends GameObject {
     public void draw(GraphicsContext gc) {
         // TODO - Use gc.fillRect() to draw the paddle
     }
+
+    // TODO - Implement moveLeft, moveRight, and stopMovingPaddle
 }
