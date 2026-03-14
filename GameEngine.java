@@ -1,7 +1,6 @@
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-
 import java.util.ArrayList;
 
 import static java.lang.Math.random;
@@ -61,14 +60,38 @@ public class GameEngine {
     }
 
     private void checkCollisions() {
-        // TODO - Write collision logic between ball, paddle, and bricks
-        // TODO - If a brick is hit, call brick.hit() and add brick.getPointValue() to score
+
+        if (ball.getBounds().intersects(paddle.getBounds())) {
+            double paddleCenter = paddle.getX() + paddle.getWidth()/2; // Apparently in JavaFX, objects starts at the top left. This calculates object center.
+            double ballCenter = ball.getX() + ball.getWidth()/2;
+
+            double diff = ballCenter - paddleCenter; // If this is negative, it's hit the left of the paddle.
+
+            ball.setDx( diff * .1); // .1 was arbitrary
+            ball.reverseY();
+
+            ball.setY(paddle.getY() - ball.getHeight()); // Prevent ball getting stuck in paddle
+
+            // Brick & Wall collisions
+
+            for (Brick brick : bricks) {
+                if (ball.getBounds().intersects(brick.getBounds())) {
+                    brick.hit();
+                    if (brick.isDestroyed()) {
+                        score += brick.getPointValue();
+                    }
+                    ball.reverseY(); // Simple bounce for now
+                    break;
+                }
+            }
+
+        }
     }
 
     private void draw(GraphicsContext gc) {
         // I'm not using clearRect because I want a black background for now (since my blocks are white), in the case a custom background is implemented, I will use clearRect
         gc.setFill(Color.BLACK);
-        gc.fillRect(0, 0, 800, 600); // I'm assuming the canvas is 800 x 600
+        gc.fillRect(0, 0, 912, 712); // Canvas is 912 x 712
         paddle.draw(gc);
         ball.draw(gc);
         for (Brick b : bricks) b.draw(gc);
@@ -76,5 +99,18 @@ public class GameEngine {
 
         gc.setFill(Color.WHITE);
         gc.fillText("Score: " + score, 10, 25);
+    }
+
+
+    public void movePaddleLeft() {
+        paddle.moveLeft();
+    }
+
+    public void movePaddleRight() {
+        paddle.moveRight();
+    }
+
+    public void stopMovingPaddle() {
+        paddle.stop();
     }
 }
