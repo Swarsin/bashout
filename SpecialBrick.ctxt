@@ -1,9 +1,13 @@
 #BlueJ class context
 comment0.target=SpecialBrick
-comment1.params=x\ y
-comment1.target=SpecialBrick(double,\ double)
+comment1.params=x\ y\ type
+comment1.target=SpecialBrick(double,\ double,\ SpecialBrick.SpecialType)
 comment2.params=
 comment2.target=void\ hit()
-comment3.params=gc
-comment3.target=void\ draw(javafx.scene.canvas.GraphicsContext)
-numComments=4
+comment3.params=
+comment3.target=void\ explode()
+comment4.params=
+comment4.target=void\ dropPowerup()
+comment5.params=gc
+comment5.target=void\ draw(javafx.scene.canvas.GraphicsContext)
+numComments=6
